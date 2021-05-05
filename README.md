@@ -14,4 +14,4 @@ Tak jak poprzednio otrzymane wartości przedstawiono na histagramie, który jest
 
 Następnie korzystając z tego samego wzoru na F co uprzednio, wykreślono zależność energii F od wartości coordination number i znajduje się ona w pliku energia_koordynacyjne.png. Możemy z niego odczytać, że układ był ograniczony dużym potencjałem z obu stron przy wartościach 3.8 nm i 7.2 nm. 
 
-Ponadto przy wartości 5.7 widzimy kolejną niewielką bariere potencjału. Jej wpływ wyraźnie widać na histogramie histogram_koordynacyjne.png, gdzie dla dokładnie tej wartości widzimy mniejszą liczbę zliczeń niż w sąsiednich przedziałach.
+Ponadto przy wartości 5.7 nm widzimy kolejną niewielką bariere potencjału. Jej wpływ wyraźnie widać na histogramie histogram_koordynacyjne.png, gdzie dla dokładnie tej wartości widzimy mniejszą liczbę zliczeń niż w sąsiednich przedziałach.
