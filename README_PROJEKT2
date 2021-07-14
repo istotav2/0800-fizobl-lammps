@@ -1,0 +1,20 @@
+Celem zadania była konstrukcja tzw. bias potential V(s) chloru i sodu. Przeprowadzono symulację układu, który został zmodyfikowany poprzez dołączenie
+do niego potencjału zewnętrznego Vw(s), który jest tzw. upper wall bias. /Potencjał ten ma kształ paraboli danej wzorem K(s-s0)^2 dla s>s0 i 
+równego 0, gdy nierówność ta jest niespełniona. Ustawiono, że s0=0.6 nm, a K=2000. Potencjał ten dołożony został, aby ominąć problem próbkowania. Użyta 
+metoda przy wyliczaniu badanego układu to próbkowanie wzmocnione, a dokładnie użyta została metoda WT-MetaD. Skrót WT jest od Well-Tempered.
+
+Bias potential V(s) dany jest wzorem V(s)=-(1-1/G)F(s), gdzie F(s) jest energią swobodną, a G nazywane jest bias factor. W trakcie symulacji ustawiono G=5.
+Po przeprowadzeniu symulacji otrzymano dane które umożliwiły uzyskanie wykresu umieszczonego na rysunku energy_nieskalowane.png. Widzimy na nim wyraźnie, że  
+czym dłuższy jest czas symulacji tym większe energie są umieszczone na wykresie.Jednakże kształt wykresów dla poszczególnych czasów jest podobny, co wskazuje na 
+zbieżność wykresów. Co więcej widzimy, że energia jest niezerowa między 0, a 0.8 nm. Wynika to, z przedziału jaki wymuszono podczas wykonywania komendy HILLS. 
+Widzimy również, że za 0.6 nm profilenergi gwałtownie idzie w górę. Jest to spowodowane obecnością Vw(s), o którym wspomniano już wcześniej.
+
+Pamiętajmy jednak, że uzyskany wykres należy pomnożyć razy G. Jednakże gdybyśmy tylko na tym poprzestali wartość energi na wykresie byłaby ogromna. 
+Dlatego podzielmy wszystkie wartości na tym wykresie przeziloczyn trzech wartości: stałej Boltzmanna k, temperatury dla której 
+przeprowadzono symulację T (T=300 Kelwinów) oraz stałej Avogadro N. Wykres po takim przeskalowaniu został umieszczony na rysunku free_energy_przeskalowane.png
+
+Aby wysupłać z tego wykresu wyłącznie free energy niezniekształconą o zewnętrzne parametry zdefiniowano wagi do przewagowania (reweight) symulacji.
+Wykorzytsano do tego celu program plumed. Otrzymane dane zostały zlogarytmowane, a następnie pomnożone razy minus jeden. Wykres z uzyskaną zależnością
+został przedstawiony na rysunku energia_z_histo.png. Jednak, aby wartości z tego wykresu odpowiadały tym z poprzedniej części, to pomnożono je razy
+kTN. Przeskalowany w ten sposób wykres został przedstawiony na rysunku energia_z_histo_przeskalowane.png. Widzimy, że po zmianie wag wykres 
+nie ma gwałtownej zmiany wartpści za 0.6 nm, a więc metoda ta poskutkowała.
